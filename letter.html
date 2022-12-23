@@ -2,8 +2,47 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <script src="script.js" defer></script>
     <title>Happy New Year</title>
     <style media="screen">
+      @font-face {
+    font-family: 'DOSMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+  font-family: 'DOSMyungjo';
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer{
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+.count {
+    text-align: center;
+}
+.count span{
+    font-size: 1.4rem;
+}
       body{background-image:url('img/back.jpg');}
     img {display: block;
       margin: auto;}
@@ -11,9 +50,27 @@
     <img src="img/ha.png" alt="happy" width="100%">
   </head>
   <body>
-    <a href="prank.html">
-    <img src="img/fire2.gif" alt="fireworks" width="80%">
-    </a>
+    <div class="container">
+      <div class="days-c">
+          <p class="timer" id="day">00</p>
+          <span>Days</span>
+      </div>
+
+      <div class="hours-c">
+          <p class="timer" id="hours">00</p>
+          <span>Hours</span>
+      </div>
+
+      <div class="mins-c">
+          <p class="timer" id="mins">00</p>
+          <span>Mins</span>
+      </div>
+
+      <div class="seconds-c">
+          <p class="timer" id="seconds">00</p>
+          <span>Seconds</span>
+      </div>
+  </div>
     <img src="img/bash-used.png" alt="letter" width="100%">
   </body>
 </html>
